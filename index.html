@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="angular.js"></script>
+   <script src="program03.js"></script>
+   <title>Calculator APP</title>
+</head>
+<body>
+   <div ng-app="calapp" ng-controller="crtl">
+       <h1>4CB21CG014</h1>
+       <div>
+           <label >Number -1</label>
+           <input type="number" ng-model="num1" placeholder="Enter the number:">
+       </div>
+       <br>
+       <div>
+           <label >Number -2</label>
+           <input type="number" ng-model="num2" placeholder="Enter the number:">
+       </div>
+       <br>
+       <div>
+           <label>Operator:</label>
+           <select ng-model="operator" ng-change="calculate()">
+               <option value="+">+</option>
+               <option value="-">-</option>
+               <option value="*">*</option>
+               <option value="/">/</option>
+           </select>
+       </div>
+       <br>
+       <button type="submit" ng-click="calculate()">Calculate</button>
+       <button type="reset" ng-click="clean()">Clear</button>
+       <p>Result of the {{num1}} and {{num2}} is {{result}} </p>
+           
+   </div>
+</body>
+</html>
